@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+@font-face {
+	font-family: "Cal Sans";
+	src: url("../fonts/CalSans-SemiBold.woff2") format("woff2"),
+	url("../fonts/CalSans-SemiBold.woff") format("woff");
+	font-weight: 600;
+	font-style: normal;
+	font-display: swap;
+}
+
+/*variables*/
+$main_color: #FF6428;
+$text_primary_color: #121212;
+$text_secondary_color: #666666;
+$box_shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+/*/variables*/
+
+/*frequently used styles*/
+body{
+	font-family: 'Poppins', sans-serif;
+	font-style: normal;
+}
+
+h1, 
+h2, 
+h3{
+	font-family: Cal Sans, sans-serif;
+	margin-bottom: 1rem;
+
+	span{
+		color: $main_color;
+	}
+}
+h1{
+	line-height: 67px;
+	font-size: 56px;
+}
+h2{
+	font-size: 48px;
+}
+h3{
+	font-size: 44px;
+}
+p{
+	color: $text_secondary_color;
+	margin-bottom: 2rem;
+}
+
+.container{
+	max-width: 1230px;
+	margin: 0 auto;
+}
+.flex, .wrapper{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.wrapper{
+	flex-direction: column;
+}
+
+.main{
+	flex: 1 1 auto;
+}
+
+.link-btn{
+	color: #fff;
+	background-color: $main_color;
+	padding: 18px 48px;
+	border-radius: 40px;
+}
+
+#menu_btn{
+	display: none;
+}
+.active{
+   background-color: #fff;
+   border:0;
+   box-shadow: $box_shadow;
+}
+
+/*/frequently used styles*/
+
+/*header*/
+
+.image{
+	height: 85%;
+	background-image: url("../images/home.png");
+	background-repeat: no-repeat;
+	background-position: top right;
+
+	&::after{
+		content: url("../images/circle_logo.svg");
+		width: 80px;
+		height: 80px;
+		right: 19%;
+		bottom: 15%;
+		transform: translate(0, 50%);
+		position: absolute;
+	}
+}
+
+.header{
+	padding-top: 3.88rem;
+	gap: 8.2rem;
+	.logo{
+		font-family: Cal Sans, sans-serif;
+		font-size: 24px;
+		color: $text_primary_color;
+
+		img{
+			margin-right: .75rem;
+		}
+	}
+	nav{
+		a{
+			font-family: 'Poppins';
+			color: $text_primary_color;
+			opacity: 40%;
+
+			&+a{
+				margin-left: 3.85rem;
+			}
+		}
+	}
+}
+
+.home{
+	margin-top: 10%;
+	.content{
+		max-width: 30rem;
+		p{
+			max-width: 420px;
+		}
+	}
+	.buttons{
+		gap: 40px;
+	}
+
+	.store+.store{
+		margin-left: 21px;
+	}
+
+}
+
+@media (max-width: 1230px){
+	.container{
+		max-width: 970px;
+	}
+	.home{ 
+		margin-top: 5%;
+	}
+
+}
+
+@media (max-width: 767px) {
+	.container{
+		width: 90%;
+	}
+
+}
+
+@media (max-width: 646px) {
+
+	
+
+	#menu_btn{
+      display: inline-block;
+      transition: .2s linear;
+   }
+
+   #menu_btn .fa-times{
+      	transform: rotate(180deg);
+      }
+
+   .header{
+   	
+   }
+
+   header{
+   	.flex{
+   		justify-content: space-evenly;
+   	}
+   }
+
+   .header nav{
+   	width: 100%;
+      top:99%; left:0; right:0;
+      background-color: #fff;
+      padding:1rem 0;
+      text-align: center;
+      flex-flow: column;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: .2s linear;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .header nav.active{
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+   }
+
+   .header nav a{
+      margin:1rem 0;
+      font-size: 2rem;
+   }
+}
