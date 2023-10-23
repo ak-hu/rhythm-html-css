@@ -11,7 +11,9 @@
 /*frequently used styles*/
 body {
   font-family: 'Poppins', sans-serif;
-  font-style: normal; }
+  font-style: normal;
+  margin: 0;
+  padding: 0; }
 
 h1,
 h2,
@@ -37,6 +39,9 @@ p {
   color: #666666;
   margin-bottom: 2rem; }
 
+a {
+  cursor: pointer; }
+
 .container {
   max-width: 1230px;
   margin: 0 auto; }
@@ -48,6 +53,9 @@ p {
 
 .wrapper {
   flex-direction: column; }
+
+.view-all {
+  color: #868686; }
 
 .main {
   flex: 1 1 auto; }
@@ -112,7 +120,22 @@ p {
 
 .products {
   margin-top: 200px;
-  text-align: center; }
+  text-align: center;
+  margin-bottom: 180px; }
+  .products .title {
+    margin-bottom: 86px; }
+  .products .wrapper {
+    gap: 6rem; }
+  .products .text-content,
+  .products .wrapper .slider {
+    justify-content: space-between; }
+  .products .text-content {
+    margin-bottom: 2rem; }
+  .products .promo-text {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 20px;
+    color: #121212; }
 
 @media (max-width: 1230px) {
   .container {
