@@ -17,7 +17,7 @@ $box_shadow: 0 .5rem 1rem rgba(0,0,0,.1);
 /*/variables*/
 
 /*frequently used styles*/
-body{
+body {
 	font-family: 'Poppins', sans-serif;
 	font-style: normal;
 	margin: 0;
@@ -26,26 +26,29 @@ body{
 
 h1, 
 h2, 
-h3{
+h3 {
 	font-family: Cal Sans, sans-serif;
 	margin-bottom: 1rem;
 
-	span{
+	span {
 		color: $main_color;
 	}
 }
-h1{
+
+h1 {
 	line-height: 67px;
 	font-size: 56px;
 }
-h2{
+
+h2 {
 	font-size: 48px;
 }
-h3{
+
+h3 {
 	font-size: 44px;
 }
 
-p{
+p {
 	color: $text_secondary_color;
 	margin-bottom: 2rem;
 }
@@ -54,16 +57,17 @@ a {
 	cursor: pointer;
 }
 
-.container{
+.container {
 	max-width: 1230px;
 	margin: 0 auto;
+	text-align: center;
 }
-.flex, .wrapper{
+.flex, .wrapper {
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 }
-.wrapper{
+.wrapper {
 	flex-direction: column;
 }
 
@@ -73,6 +77,10 @@ a {
 
 .main{
 	flex: 1 1 auto;
+}
+
+.title {
+	margin-bottom: 86px;
 }
 
 .link-btn{
@@ -139,19 +147,20 @@ a {
 	}
 }
 
-.home{
+.home {
 	margin-top: 10%;
-	.content{
+
+	.content {
 		max-width: 30rem;
-		p{
+		p {
 			max-width: 420px;
 		}
 	}
-	.buttons{
+	.buttons {
 		gap: 40px;
 	}
 
-	.store+.store{
+	.store+.store {
 		margin-left: 21px;
 	}
 
@@ -159,12 +168,7 @@ a {
 
 .products {
 	margin-top: 200px;
-	text-align: center;
 	margin-bottom: 180px;
-
-	.title {
-		margin-bottom: 86px;
-	}
 
 	.wrapper {
 		gap: 6rem;
@@ -185,6 +189,30 @@ a {
 		color: $text_primary_color;
 	}
 }
+
+.categories {
+	margin-bottom: 220px;
+
+	.category {
+		position: relative;
+
+		.category-text {
+			position: absolute;
+			z-index: 3;
+			top: 80%;
+			left: 50%;
+			transform: translateX(-50%); 
+			color: #fff;
+
+
+		}
+
+		& + & {
+			margin-left: 4.3rem;
+		}
+	}
+}
+
 
 @media (max-width: 1230px){
 	.container{

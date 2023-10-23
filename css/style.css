@@ -44,7 +44,8 @@ a {
 
 .container {
   max-width: 1230px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .flex, .wrapper {
   display: flex;
@@ -59,6 +60,9 @@ a {
 
 .main {
   flex: 1 1 auto; }
+
+.title {
+  margin-bottom: 86px; }
 
 .link-btn {
   color: #fff;
@@ -120,10 +124,7 @@ a {
 
 .products {
   margin-top: 200px;
-  text-align: center;
   margin-bottom: 180px; }
-  .products .title {
-    margin-bottom: 86px; }
   .products .wrapper {
     gap: 6rem; }
   .products .text-content,
@@ -136,6 +137,20 @@ a {
     font-weight: 600;
     font-size: 20px;
     color: #121212; }
+
+.categories {
+  margin-bottom: 220px; }
+  .categories .category {
+    position: relative; }
+    .categories .category .category-text {
+      position: absolute;
+      z-index: 3;
+      top: 80%;
+      left: 50%;
+      transform: translateX(-50%);
+      color: #fff; }
+    .categories .category + .categories .category {
+      margin-left: 4.3rem; }
 
 @media (max-width: 1230px) {
   .container {
